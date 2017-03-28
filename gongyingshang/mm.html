@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>供应商注册</title>
+		<link rel="stylesheet" href="css/style.css">
+		<!--<link rel="stylesheet" href="css/validform.css">-->
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<!--<script type="text/javascript" src="js/validform.js"></script>-->
+	</head>
+
+	<body>
+		<div class="main">
+			<form action="" class="formBox" id='form'>
+				<section>
+					<div class="title">账户信息</div>
+					<div class="inputBox clearfix">
+						<div class="input">
+							<input type="text" name="" id="" value="" class="txt name kong" placeholder="姓名" />
+							<input type="hidden" readonly value="0" class="hiddenIpt">
+							<div class="validform"><span class="Validform_checktip">必填</span></div>
+						</div>
+						<div class="input">
+							<input type="text" name="" id="" value="" class="txt job kong" placeholder="职务" />
+							<input type="hidden" value="0" class="hiddenIpt">
+							<div class="validform"><span class="Validform_checktip">必填</span></div>
+						</div>
+						<div class="input">
+							<input type="number" name="" id="" value="" class="txt tel kong" placeholder="手机号" />
+							<input type="hidden" value="0" class="hiddenIpt">
+							<div class="validform"><span class="Validform_checktip">请输入正确的手机号码</span></div>
+						</div>
+						<div class="input confirmInput">
+							<input type="text" name="" id="" value="" class="txt comfirm" placeholder="验证码" />
+
+							<a href="javascript:void(0);" class="get_comfirm">获取验证码</a>
+						</div>
+					</div>
+				</section>
+				<section>
+					<div class="title">公司信息</div>
+					<div class="inputBox clearfix">
+						<div class="input">
+							<input type="text" name="" id="" value="" class="txt copName kong" placeholder="公司名称" />
+							<input type="hidden" value="0" class="hiddenIpt">
+							<div class="validform"><span class="Validform_checktip">必填</span></div>
+						</div>
+						<div class="input">
+							<textarea name="" rows="6" cols="" placeholder="公司简介" class="area" id="area_1"></textarea>
+
+							<p class="count"><em id='text_count_1'>0</em>/120</p>
+						</div>
+					</div>
+				</section>
+				<section>
+					<div class="title">公司地址</div>
+					<div class="inputBox clearfix">
+						<div class="input">
+							<div class="txtW address">省</div>
+							<div class="arrows"><i class="up"></i><i class="down"></i></div>
+						</div>
+						<div class="input">
+							<div class="txtW address">市</div>
+							<div class="arrows"><i class="up"></i><i class="down"></i></div>
+						</div>
+						<div class="input">
+							<div class="txtW address">区</div>
+							<div class="arrows"><i class="up"></i><i class="down"></i></div>
+						</div>
+						<div class="input">
+							<textarea name="" rows="6" cols="" placeholder="详细地址" class="area ads txt kong" id="area_2"></textarea>
+							<input type="hidden" value="0" class="hiddenIpt">
+							<div class="validform"><span class="Validform_checktip">必填</span></div>
+							<p class="count"><em id='text_count_2'>0</em>/120</p>
+						</div>
+					</div>
+				</section>
+				<section>
+					<div class="title">可供产品</div>
+					<div class="inputBox clearfix">
+						<div class="input">
+							<div class="txtC"><i class="off"></i>
+								<input type="checkbox" class="check">
+								<span class="word">水印纸箱</span></div>
+						</div>
+						<div class="input">
+							<div class="txtC"><i class="off"></i>
+								<input type="checkbox" class="check">
+								<span class="word">彩色纸箱</span></div>
+						</div>
+						<div class="input">
+							<div class="txtC"><i class="off"></i>
+								<input type="checkbox" class="check">
+								<span class="word">彩盒</span></div>
+						</div>
+						<div class="input">
+							<div class="txtC"><i class="off"></i>
+								<input type="checkbox" class="check">
+								<span class="word">手提袋</span></div>
+						</div>
+						<div class="input">
+							<div class="txtC"><i class="off"></i>
+								<input type="checkbox" class="check">
+								<span class="word">快递袋</span></div>
+						</div>
+						<div class="input">
+							<div class="txtC"><i class="off"></i>
+								<input type="checkbox" class="check">
+								<span class="word">复合袋</span></div>
+						</div>
+						<div class="input">
+							<div class="txtC"><i class="off"></i>
+								<input type="checkbox" class="check">
+								<span class="word">EPE</span></div>
+						</div>
+						<div class="input">
+							<div class="txtC"><i class="off"></i>
+								<input type="checkbox" class="check">
+								<span class="word">充气缓冲胶囊</span></div>
+						</div>
+						<div class="input lastInput">
+							<div class="txtC">
+								<i class="off"></i>
+								<input type="checkbox" class="check">
+								<span class="word">其他</span>
+							</div>
+							<div class="areaBox">
+								<textarea name="" rows="2" cols="" placeholder="产品补充" class="checkArea"></textarea>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section>
+					<div class="btnBox clearfix">
+						<input type="button" name="" value="注册" class="btn" id="btnSubmit" />
+					</div>
+					<input type="hidden" value="0" id="yz">
+				</section>
+
+				<div id="" class="mesgBox">
+					<p>账户已注册</p>
+				</div>
+
+			</form>
+			<script type="text/javascript">
+				$(document).ready(function() {
+
+					
+
+				 	//输入框变换字体颜色
+				 	$('.inputBox .input .txt').keyup(function() {
+				 		$(this).addClass('txtfocus');
+				 	})
+
+				 	//控制textarea输入字数
+				 	function countN(areaN, areaC) {
+				 		$(areaN).on("input propertychange", function() {
+				 			var $this = $(this),
+				 				_val = $this.val(),
+				 				count = "";
+				 			if(_val.length > 120) {
+				 				$this.val(_val.substring(0, 120));
+				 			}
+				 			count = $this.val().length;
+				 			$(areaC).text(count);
+				 		});
+				 	}
+				 	countN('#area_1', '#text_count_1');
+				 	countN('#area_2', '#text_count_2');
+
+				 	// checkbox样式美化
+				 	$(".txtC").click(function() {
+				 		var checkbox = $(this).children('input');
+				 		var chkbIClassName = $(this).children('i').attr('class');
+				 		var chkbI = $(this).children('i');
+				 		if(chkbIClassName === 'off') {
+				 			chkbI.removeClass("off").addClass("on");
+				 			$(checkbox).attr('checked', 'checked');
+				 			chkbI.parent().next('.areaBox').show();
+				 		} else if(chkbIClassName === 'on') {
+				 			chkbI.removeClass("on").addClass("off");
+				 			$(checkbox).removeAttr('checked');
+				 			chkbI.parent().next('.areaBox').hide();
+				 		}
+
+				 	});
+
+				})
+				
+			//提交表单
+			function submitMessage (){
+
+				$(".txt").each(function (i,elem){
+					$(elem).blur(function (){
+						if( $.trim($(elem).val()).length==0 ){
+							$(elem).next().val("0")
+							$(elem).next().next().show();
+						}else{
+							$(elem).next().val("1")
+							$(elem).next().next().hide();
+						}
+					})
+				})
+
+				$(".tel").on('blur',function (){
+					var phoneNum=/^1[34578]\d{9}$/.test($(this).val());
+					if(phoneNum==true){
+						$(this).siblings('.validform').hide();
+					}else{
+						$(this).siblings('.validform').show();
+						$(this).next().val("0");
+					}
+				})
+
+
+
+				var arr=[];
+				var len=$(".hiddenIpt").length;
+				
+				$("#btnSubmit").on("click",function (){
+
+					$(".txt").each(function (i,elem){
+						if( $.trim($(this).val()).length==0 ){
+							$(this).siblings('.validform').show()	
+						}
+					})
+					
+
+					arr=[];
+					$(".hiddenIpt").each(function (i,elem){
+						arr.push( $(elem).val() )
+					})
+					console.log(arr);
+
+					var arr2=[];
+					for(var i=0;i<len;i++){
+						if(arr[0]=='1' && arr[0]==arr[i+1]){
+							arr2.push(arr[i+1])
+						}
+					}
+					//console.log(arr2);
+					if(arr2.length==(len-1)){
+						console.log("ok")
+					}else{
+						console.log("error")
+					}
+					
+					//获取必填未填的第一项焦点
+					var arr3=[];
+					$(".kong").each(function (i,elem){
+						var index=i;
+						if(trim($(elem).val()) =='' || $(elem).length ==0){
+							arr3.push(i);
+						}
+					})
+					//alert(arr);
+					var j=arr3[0];
+					$('.kong')[j].focus();
+			
+				})
+				
+				//点击输入框清空输入框内容
+				/*$('.kong').on('focus',function(){
+					var nameV = $(this).val();
+					var nameL=$(this).length;
+					
+					if(trim(nameV) == '' || nameL == 0 || nameL > 0){
+						nameV='';
+						$(this).next('.validform').hide();
+					}    
+				})*/
+
+			}
+			
+			
+				
+			submitMessage()
+			
+			function trim(str) { //删除左右两端的空格　
+						return str.replace(/(^\s*)|(\s*$)/g, "");
+			}
+				
+
+				
+			</script>
+		</div>
+	</body>
+
+</html>

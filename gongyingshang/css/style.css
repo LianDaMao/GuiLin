@@ -1,0 +1,61 @@
+@charset "utf-8";
+/* CSS Document */
+    	/*-----重置样式-----*/
+    	body,div,input,textarea,a,p,em,i,section{margin:0; padding: 0;font-size: normal; font-weight: normal;}
+    	input,textarea,div,label{ box-sizing: border-box; -webkit-box-sizing: border-box; }
+    	input{border:none; appearance:transparent; outline: none; background:none;color: #999;}
+		input[type='submit']{}
+		textarea{border:none; outline: none;}
+		a{font-size:normal; text-decoration: none; border: none;}
+		a:hover{text-decoration: none;}
+		.clearfix:after{content: ''; font-size:0; height:0; overflow: hidden; display: block; clear: both;}
+		.clearfix{*display:inline-block; _height:1%;}
+		/*-----覆盖样式-----*/
+		body{font-family: sans-serif; font-size:14px; background: #f3f3f3;}
+		.main{}
+		.main .title{padding:0 12px; height:48px; line-height: 48px; font-size:15px;}
+		.main .title{}
+		.main section{display: block; margin-bottom: 6px;}
+		.inputBox{padding-left:12px; height:auto; background: #fff;}
+		.inputBox .input{position:relative; width:auto; height:auto;}
+		.inputBox .input:after{position:absolute; left:0; right:0; top:-1px; z-index: 1; content:''; width: 100%; height:1px; border-top: 1px solid #ECECEC; transform:scaleY(0.5);  -webkit-transform:scaleY(0.5);}
+		.inputBox .input:first-child:after{display:none; height:0; border-top:none;}
+		.inputBox .input .txt,.inputBox .input .txtW,.inputBox .input .txtC{padding:16px 9px; width:100%; font-size:14px; }
+		.inputBox .input .txt.txtfocus{color:#333;}
+		.inputBox .input .comfirm{padding-right:92px;}
+		.inputBox .input .get_comfirm{position:absolute; right:12px; top:0; line-height:48px; color:#00A0E8; font-size: 14px;}
+		/*地址*/
+		.inputBox .input .address{color:#333; }
+		.inputBox .input .arrows{position:absolute; right:16px; top:19px; z-index:2; width:8px; height:auto;}
+		.inputBox .input .arrows i{display:block;  }
+		.inputBox .input .arrows .up{margin-bottom:2px; width:8px; height:5px; background-image:url(../img/arrowUp@3x.png) ; background-repeat: no-repeat; background-size:8px 5px;}
+		.inputBox .input .arrows .down{width:8px; height:5px; background-image:url(../img/arrowDown@3x.png) ; background-repeat: no-repeat; background-size:8px 5px;}
+		.inputBox .input .area{padding:11px 9px 11px; width:100%; font-family: sans-serif; font-size:14px; resize: none; word-break: break-all; word-wrap: break-word;}
+		.inputBox .input .count{position:absolute; right:11px; bottom:9px; font-size:12px; color:#999;}
+		.inputBox .input .count em{font-style: normal; }
+		/*产品*/
+		.inputBox .input .check{display:none;}
+		.inputBox .input .word{display:inline-block; margin-left: 49px;  font-size:14px; color:#333;}
+		.inputBox .input .txtC i{display:block; position:absolute; left:9px; right:; top:14px; z-index: 1; width:18px; height:18px; background:#fff; border:1px solid #C9C9C9; border-radius: 3px; -webkit-border-radius: 3px;}		
+		.inputBox .input .txtC .off{}
+		.inputBox .input .txtC .on:after{position:absolute; content:''; left:2px; top:3px; z-index: 2; width:15px; height:11px; background-image:url(../img/checked@3x.png); background-size:15px 11px; background-position: 0 0;}
+		
+		.inputBox .input .areaBox{display:none; margin:0 24px 12px 40px;}
+		.inputBox .input .checkArea{padding:8px 10px; width:100%; font-family: sans-serif; font-size:13px; resize: none; background: #F1F1F1; border-radius: 3px; -webkit-border-radius: 3px; overflow-y: visible;}
+		
+		.inputBox .lastInput{margin-left:-12px;}
+		.inputBox .lastInput .txtC{padding-left:21px;}
+		.inputBox .lastInput .txtC i{left:21px;}
+		.inputBox .lastInput .areaBox{margin-left:72px;}
+		.btnBox{margin:24px 18px 30px; }
+		.btnBox .btn{width:100%; height:42px; line-height: 42px; background-image: linear-gradient(-180deg, #05BEE1 3%, #00A0E8 100%); background-image: -webkit-linear-gradient(-180deg, #05BEE1 3%, #00A0E8 100%); border: 1px solid #00AEFD; border-radius: 4px; -webkit-border-radius: 4px; color:#fff; font-size: 14px;}
+
+		.mesgBox{display:none; position:fixed; top:80%; z-index:99; width:100%; height:36px; font-size:;  text-align: center;}
+		.mesgBox p{display: inline-block; padding:9px 12px; color:#fff; text-align:center; font-size:14px; background: rgba(0,0,0,.6); border-radius: 3px; -webkit-border-radius: 3px;}
+		
+		/*验证*/
+		.validform {display:none; color: #666;position: absolute;  line-height: 48px; right:12px; top:0;}
+		.Validform_checktip {margin-left: 8px;line-height: 48px;height: 48px;overflow: hidden;color: #ca0000; font-size: 14px;}
+		.Validform_wrong {color: #ca0000; white-space: nowrap;}
+		
+

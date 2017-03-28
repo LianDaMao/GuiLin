@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>供应商注册</title>
+<link rel="stylesheet" href="css/style.css">
+<!--<link rel="stylesheet" href="css/validform.css">-->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<!--<script type="text/javascript" src="js/validform.js"></script>-->
+<script type="text/javascript" src="js/register.js"></script>
+</head>
+
+<body>
+<div class="main">
+  <form action="" class="formBox" id='form'>
+    <section>
+      <div class="title">账户信息</div>
+      <div class="inputBox clearfix">
+        <div class="input">
+          <input type="text" name="" value="" class="txt txtInput" placeholder="姓名" id="name" onblur="atxt(this)" onfocus="aFocus(this)"/>
+          <div class="validform"><span class="Validform_checktip">必填</span></div>
+        </div>
+        <div class="input">
+          <input type="text" name="" id="" value="" class="txt txtInput" placeholder="职务"  onblur="atxt(this)" onfocus="aFocus(this)"/>
+          <div class="validform"><span class="Validform_checktip">必填</span></div>
+        </div>
+        <div class="input">
+          <input type="number" name="" id="" value="" class="txt tel" placeholder="手机号"  onblur="aPhone(this)" onfocus="aFocus(this)"/>
+          <div class="validform"><span class="Validform_checktip">必填</span></div>
+        </div>
+        <div class="input confirmInput">
+          <input type="text" name="" id="" value="" class="txt  comfirm" placeholder="验证码" />
+          <a href="javascript:void(0);" class="get_comfirm">获取验证码</a> </div>
+      </div>
+    </section>
+    <section>
+      <div class="title">公司信息</div>
+      <div class="inputBox clearfix">
+        <div class="input">
+          <input type="text" name="" id="" value="" class="txt txtInput copName" placeholder="公司名称"  onblur="atxt(this)" onfocus="aFocus(this)"/>
+          <div class="validform"><span class="Validform_checktip">必填</span></div>
+        </div>
+        <div class="input">
+          <textarea name="" rows="6" cols="" placeholder="公司简介" class="area " id="area_1"></textarea>
+          <p class="count"><em id='text_count_1'>0</em>/120</p>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="title">公司地址</div>
+      <div class="inputBox clearfix">
+        <div class="input">
+          <div class="txtW address">省</div>
+          <div class="arrows"><i class="up"></i><i class="down"></i></div>
+        </div>
+        <div class="input">
+          <div class="txtW address">市</div>
+          <div class="arrows"><i class="up"></i><i class="down"></i></div>
+        </div>
+        <div class="input">
+          <div class="txtW address">区</div>
+          <div class="arrows"><i class="up"></i><i class="down"></i></div>
+        </div>
+        <div class="input">
+          <textarea name="" rows="6" cols="" placeholder="详细地址" class="area txtInput ads " id="area_2"  onblur="atxt(this)" onfocus="aFocus(this)"></textarea>
+          <div class="validform"><span class="Validform_checktip">必填</span></div>
+          <p class="count"><em id='text_count_2'>0</em>/120</p>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="title">可供产品</div>
+      <div class="inputBox clearfix">
+        <div class="input">
+          <div class="txtC"><i class="off"></i>
+            <input type="checkbox" class="check">
+            <span class="word">水印纸箱</span></div>
+        </div>
+        <div class="input">
+          <div class="txtC"><i class="off"></i>
+            <input type="checkbox" class="check">
+            <span class="word">彩色纸箱</span></div>
+        </div>
+        <div class="input">
+          <div class="txtC"><i class="off"></i>
+            <input type="checkbox" class="check">
+            <span class="word">彩盒</span></div>
+        </div>
+        <div class="input">
+          <div class="txtC"><i class="off"></i>
+            <input type="checkbox" class="check">
+            <span class="word">手提袋</span></div>
+        </div>
+        <div class="input">
+          <div class="txtC"><i class="off"></i>
+            <input type="checkbox" class="check">
+            <span class="word">快递袋</span></div>
+        </div>
+        <div class="input">
+          <div class="txtC"><i class="off"></i>
+            <input type="checkbox" class="check">
+            <span class="word">复合袋</span></div>
+        </div>
+        <div class="input">
+          <div class="txtC"><i class="off"></i>
+            <input type="checkbox" class="check">
+            <span class="word">EPE</span></div>
+        </div>
+        <div class="input">
+          <div class="txtC"><i class="off"></i>
+            <input type="checkbox" class="check">
+            <span class="word">充气缓冲胶囊</span></div>
+        </div>
+        <div class="input lastInput">
+          <div class="txtC"> <i class="off"></i>
+            <input type="checkbox" class="check">
+            <span class="word">其他</span> </div>
+          <div class="areaBox">
+            <textarea name="" rows="2" cols="" placeholder="产品补充" class="checkArea"></textarea>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="btnBox clearfix">
+        <input type="button" name="" value="注册" class="btn" id="btnSubmit" />
+      </div>
+     <input type="hidden" value="0" id="yz">
+    </section>
+    <div id="" class="mesgBox">
+      <p>账户已注册</p>
+    </div>
+  </form>
+
+</div>
+</body>
+</html>
