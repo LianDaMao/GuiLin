@@ -481,5 +481,53 @@ x:-o-prefocus, .form_field .select_btn::after {
 .form_item .focus{
 	box-shadow: 0px 0px 5px rgba(0,0,0,.2);
 }
+/*覆盖部分select插件样式*/
+.sod_select{
+	padding:0px 10px;
+	width:100%;
+	height:30px;
+	line-height: 30px;
+	border: 1px solid #D4D4D4;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	box-shadow: 0px 0px 3px rgba(0,0,0,.2) inset;
+	-webkit-box-shadow: 0px 0px 3px rgba(0,0,0,.1) inset;
+	font-size:14px;
+	color:#333;
+}
+.sod_select .sod_list{
+	margin:0;
+	width:100%;
+	border:1px solid #D4D4D4;
+	border-radius: 0 0 4px 4px;
+	-webkit-border-radius:0 0 4px 4px;
+}
+.sod_select .sod_list li{
+	padding:0px 10px;
+}
+/*下拉框在框顶部*/
+.sod_select.above .sod_list{
+	border-top:1px solid #D4D4D4;
+	border-bottom:1px solid #D4D4D4;
+	border-radius:4px 4px 0 0 ;
+	-webkit-border-radius:4px 4px 0 0 ;
+}
+/*关于右侧箭头*/
+.sod_select:before{
+	display:none;
+}
+.sod_select:after{
+	content:'';
+	border: 5px solid #333;
+	border-color: #333 transparent transparent transparent;
+	top:12px;
+	bottom:0px;
+}
+.sod_select:hover, .sod_select.open, .sod_select.focus {
+    border: 1px solid #D4D4D4;
+}
+.sod_select.focus{
+	box-shadow:none;
+}
 
 
