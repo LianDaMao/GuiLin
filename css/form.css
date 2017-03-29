@@ -1,0 +1,537 @@
+/*------------------------------- 重置默认样式 ---------------------------------*/
+html,body,div,form,label,a,span,p,i,em{
+	margin:0; 
+	padding:0;
+	font-size:normal;
+	font-weight: normal;
+}
+input,button,textarea{
+	margin:0;
+	padding:0;
+	border:none;
+	background: none;
+	font-size:normal;
+	font-weight: normal;
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	outline: none;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+a{
+	color:#333;
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	outline: none;
+	text-decoration: none;	
+}
+a:hover,a:active{
+	text-decoration: none;
+}
+/*压缩盒子*/
+body,div,form,label,a,span,p,i{
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+/*清除浮动*/
+.clearfix:after{
+	content:'';
+	display: block;
+	clear: both;
+	visibility: hidden;  /*使用overflow:hidden在有些浏览器不起作用*/
+	font-size:0;
+	height:0;
+}
+.clearfix{
+	*display:inline_block;
+	_height:1%;
+}
+/*------------------------------- 重写样式 ---------------------------------*/
+html{
+	
+}
+body{
+	margin:;
+	padding:;
+	background:#fff;
+	font-size:14px;
+	font-family: "arial, helvetica, sans-serif,微软雅黑";
+	color:#333;
+	
+}
+.formOuterBox{
+	margin:;
+	padding:20px;
+	width:100%;
+	min-height:100%;
+}
+.formBox{
+	margin:;
+	padding:;
+	width:100%;
+	height:auto;
+}
+/*----每行表单----*/
+.form_item{
+	margin:0 0 20px 0;
+	padding:;
+	width:100%;
+	height:auto;
+}
+/*表单title*/
+.form_item label{
+	float:left;
+	padding:5px;
+	width:15%;
+	text-align: right;
+	font-size:;
+	vertical-align: top;
+}
+/*表单content*/
+.form_item .form_field{
+	position:relative; 
+	display: inline-block;
+	width:85%;
+}
+/*----文本输入框----*/
+.form_field .form_text{
+	padding:5px 10px;
+	width:60%;
+	height:30px;
+	border:1px solid #D4D4D4;
+	font-size:;
+	vertical-align: top;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	box-shadow: 0px 0px 3px rgba(0,0,0,.2) inset;
+	-webkit-box-shadow: 0px 0px 3px rgba(0,0,0,.1) inset;
+}
+/*---提示信息---*/
+.form_field .form_infor{
+	display:inline-block;
+	padding:0 10px;
+	margin: 0 0 0 10px;
+	width:;
+	height:30px;
+	line-height: 30px;
+	background:#fbe3e4;
+	border:1px solid #fbc2c4;
+	font-size:12px;
+	vertical-align: top;
+}
+/*--- 验证码输入 ---*/
+.form_field .comfirm_box {
+	display:inline-block;
+	width:60%;
+	height:auto;
+}
+.form_field .comfirm_box .form_text{
+	float:left;
+	width:70%;
+}
+.form_field .comfirm_box .form_comfirm{
+	/*float:right; 出现4px的高度*/
+	display:inline-block;
+	width:29%;
+	margin-left:1%;
+	height:30px;
+	padding:5px 10px;
+	color:#fff;
+	font-size: 12px;
+	background:#bdbdbd;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+.form_field .comfirm_box .form_comfirm:hover{
+	opacity:0.9;
+	filter:alpha(opacity=90);
+}
+/*图片验证码输入 ---*/
+.form_field .comfirm_pic_box {
+	display:inline-block;
+	width:60%;
+	height:auto;
+}
+.form_field .comfirm_pic_box .form_text{
+	float:left;
+	width:70%;
+}
+.form_field .comfirm_pic_box .picBox{
+	display:inline-block;
+	margin-left:1%;
+	width:29%;
+	height:30px;
+	line-height: 30px;
+	text-align: center;
+}
+.comfirm_pic_box .picBox .form_pic{
+	display:inline-block;
+	width:46%;
+	vertical-align: top;
+	cursor: pointer;
+	font-weight: bold;
+	font-size:14px;
+}
+.comfirm_pic_box .picBox .change{
+	display:inline-block;
+	margin-left:4%;
+	width:50%;
+	color:#fff;
+	font-size: 12px;
+	background:#bdbdbd;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	cursor: pointer;
+}
+.comfirm_pic_box .picBox .change:hover{
+	opacity:0.9;
+	filter:alpha(opacity=90);
+}
+
+
+/*覆盖输入密码有明文密文图标---*/
+.form_field .pwd_toggleBox{
+	position:relative;    /*方便输入框定位图标*/
+	display:inline-block;
+	width:60%;
+	height:auto;
+}
+.form_field .pwd_toggleBox .form_text{
+	width:100%;
+}
+.form_field .pwd_toggle{
+	position:absolute;
+	right:20px;
+	top:7px;
+	padding:;
+	width:;
+	height:;
+	background:;
+	font-size: 12px;
+}
+.form_field .pwd_clear{
+	position:absolute;
+	right:5px;
+	top:8px;
+	padding:;
+	width:14px;
+	height:14px;
+	line-height: 14px;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	background:red;
+	font-size: 12px;
+	color:#fff;
+	text-align: center;
+	display:none;
+}
+/*-----单选框------*/
+.form_field .form_radio{
+	opacity:0;		   /*让radio变成透明,但是仍然存在*/
+	cursor: pointer;
+	filter: alpha(opacity=0);  /*兼容ie*/
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+}
+.form_field .radio_check{
+	display:inline-block;
+	padding-right:10px;
+	width:;
+	height:30px;
+}
+.form_field .radio_check .icon{
+	display:inline-block;
+	float:left;
+	margin-top: 6px;
+	width:24px;
+	height:18px;
+	text-align: center;
+	background:url(../img/inputradio.gif);
+	background-position:-24px 0;
+}
+.form_field .radio_check p{
+	display: inline-block;
+	padding-left:5px;
+	line-height: 30px;
+}
+/*radio变成块状*/
+.form_field .radio_check_block{
+	display:block;
+}
+/*radio选中*/
+.form_field .radio_check_on .icon{
+	background-position:0 0;
+}
+
+/*-----多选框-----*/
+.form_field .form_checkbox{
+	opacity:0;		   /*让checkbox变成透明,但是仍然存在*/
+	cursor: pointer;
+	filter: alpha(opacity=0);  /*兼容ie*/
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";	
+}
+.form_field .checkbox_check{
+	display:inline-block;
+	padding-right:10px;
+	width:;
+	height:30px;
+}
+.form_field .checkbox_check .icon{
+	display:inline-block;
+	float:left;
+	margin-top:6px;
+	width:16px;
+	height:18px;
+	text-align: center;
+	background:url(../img/checkbox_01.gif);
+	background-position:-2px -1px;
+}
+.form_field .checkbox_check p{
+	display: inline-block;
+	padding-left:5px;
+	line-height: 30px;
+}
+/*checkbox变成块状*/
+.form_field .checkbox_check_block{
+	display:block;
+}
+/*checkbox选中*/
+.form_field .checkbox_check_on .icon{
+	background-position:-2px -22px;
+}
+
+/*-----下拉框(适合在移动端，在移动端下拉框会直接调用系统弹出)-----*/
+.form_field .select_btn{
+	position:relative; 
+	display: inline-block;
+	width:60%;
+	height:30px; 
+	line-height: 30px;
+	background:#fff;
+	border:1px solid #D4D4D4;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	box-shadow: 0px 0px 3px rgba(0,0,0,.2) inset;
+	-webkit-box-shadow: 0px 0px 3px rgba(0,0,0,.1) inset;
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+}
+/*下拉框箭头*/
+.form_field .select_btn::after{  
+	content:'';
+	position:absolute;
+	right:10px;
+	top:12px;
+	background:url();
+	border:5px solid #333;
+	border-color: #333 transparent transparent transparent;
+}
+.form_field .select_btn .form_select{
+	padding:0 10px;
+	width:100%;
+	height:100%;
+	border:none;
+	background:transparent;
+	outline: none;
+	font-size:14px;
+	vertical-align: top;
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	appearance: none;
+	-webkit-appearance: none;
+	cursor: pointer;
+}
+.form_field .select_btn option{
+	font-weight: normal;
+}
+x:-o-prefocus, .form_field .select_btn::after {
+  display:none;
+} 
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+  .form_field .select_btn select::-ms-expand {
+    display: none;
+  }
+  .form_field .select_btn select:focus::-ms-value {
+    background: transparent;
+    /*color: #222;*/
+  }
+}  
+/*火狐下拉框去掉箭头*/
+@-moz-document url-prefix() { 
+	.form_field .select_btn{
+		overflow: hidden;
+	}
+	.form_field .select_btn .form_select{
+		width:120%;
+		width: -moz-calc(100% + 1.5em);
+		width: calc(100% + em);
+	}
+}
+/*下拉框2-----*/
+.form_field .select_btn2{
+	position:relative;
+	display:inline-block;
+	width:60%;
+}
+.form_field .select_btn2 .select_word{
+	display: block;
+	padding:0 10px;
+	width:100%;
+	height:30px;
+	line-height: 30px;
+	background:#fff;
+	border:1px solid #D4D4D4;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	box-shadow: 0px 0px 3px rgba(0,0,0,.2) inset;
+	-webkit-box-shadow: 0px 0px 3px rgba(0,0,0,.1) inset;
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+}
+.form_field .select_btn2 .select_word:after{
+	content:'';
+	position:absolute;
+	right:10px;
+	top:12px;
+	background:url();
+	border:5px solid #333;
+	border-color: #333 transparent transparent transparent;
+}
+.form_field .select_btn2 .form_select{
+	position:absolute;
+	top:0;
+	left:0; 
+	right:0;
+	width:100%;
+	height:100%;
+	opacity: 0;
+}
+
+/*下拉框(插件：修改的css在页面里)-----*/
+.form_field .select_box{
+	position:relative;
+	display: inline-block;
+	width:60%;
+	height:30px;
+}
+.form_field .select_box .form_select{
+	width:100%;
+}
+
+/*-----文本域-----*/
+.form_field .area_box{
+	position:relative;
+	display:inline-block;
+	width:60%;
+	height:auto;
+}
+.form_field .area_box p{
+	position:absolute;
+	right:15px;
+	bottom:10px;
+	text-align: right;	
+}
+.form_field .area_box .count{
+	padding-right:5px;
+}
+.form_field .form_area{
+	padding:10px;
+	width:100%;
+	height:100px;
+	line-height: 20px;
+	border:1px solid #D4D4D4;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	box-shadow: 0px 0px 3px rgba(0,0,0,.2) inset;
+	-webkit-box-shadow: 0px 0px 3px rgba(0,0,0,.1) inset;
+	font-family: "arial, helvetica, sans-serif,微软雅黑";
+	font-size:14px;
+}
+/*-----确定按钮-----*/
+.form_submit{
+	margin:0 0 20px 0;
+	padding-left:15%;
+	width:100%;
+	height:auto;
+}
+.form_submit .btn_default{
+	padding:5px 15px;
+	background:#bdbdbd;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	font-size:14px;
+	color:#fff;
+}
+.form_submit .btn_default:hover{
+	opacity: 0.9;
+	filter: alpha(opacity=90);
+}
+.form_submit .btn_primary{
+	background:#00a0e8;
+}
+
+/*-----输入框获取焦点样式----*/
+/*input[type='text']:focus,input[type='password']:focus,textarea:focus{
+	box-shadow: 0px 0px 5px rgba(0,0,0,.3);
+}
+*/
+.form_item .focus{
+	box-shadow: 0px 0px 5px rgba(0,0,0,.2);
+}
+
+
+
+
+/*覆盖部分select插件样式*/
+.sod_select{
+	padding:0px 10px;
+	width:100%;
+	height:30px;
+	line-height: 30px;
+	border: 1px solid #D4D4D4;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	box-shadow: 0px 0px 3px rgba(0,0,0,.2) inset;
+	-webkit-box-shadow: 0px 0px 3px rgba(0,0,0,.1) inset;
+	font-size:14px;
+	color:#333;
+}
+.sod_select .sod_list{
+	margin:0;
+	width:100%;
+	border:1px solid #D4D4D4;
+	border-radius: 0 0 4px 4px;
+	-webkit-border-radius:0 0 4px 4px;
+}
+.sod_select .sod_list li{
+	padding:0px 10px;
+}
+/*下拉框在框顶部*/
+.sod_select.above .sod_list{
+	border-top:1px solid #D4D4D4;
+	border-bottom:1px solid #D4D4D4;
+	border-radius:4px 4px 0 0 ;
+	-webkit-border-radius:4px 4px 0 0 ;
+}
+/*关于右侧箭头*/
+.sod_select:before{
+	display:none;
+}
+.sod_select:after{
+	content:'';
+	border: 5px solid #333;
+	border-color: #333 transparent transparent transparent;
+	top:12px;
+	bottom:0px;
+}
+.sod_select:hover, .sod_select.open, .sod_select.focus {
+    border: 1px solid #D4D4D4;
+}
+.sod_select.focus{
+	box-shadow:none;
+}
+
+
